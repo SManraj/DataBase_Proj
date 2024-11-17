@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <title>Employee Login</title>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Employee Login</h2>
+        <a href="index.html" class="button"> <button>Return Home</button></a>
+        <form id="login-form" onsubmit="handleLogin(event)">
+            <input type="text" name="username" id="username" placeholder="Username" required>
+            <input type="password" name="password" id="password" placeholder="Password" required>
+            <input type="submit" value="Login">
+        </form>
+    </div>
+
+    <script>
+        function handleLogin(event) {
+            event.preventDefault(); 
+    
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            if (username === "admin" && password === "123") { 
+                document.getElementById("admin_dashboard").style.display = "block"; 
+                document.querySelector(".login-container").style.display = "none"; 
+            } 
+            else if (username === "employee123" && password === "123") {
+                document.getElementById("emp_dashboard").style.display = "block"; 
+                document.querySelector(".login-container").style.display = "none"; 
+            }
+            else {
+                alert("Invalid login credentials. Please try again.");
+            }
+        }
+    </script>
+    
+    <!--Admin Login Page-->
+    <div id="admin_dashboard" class="dashboard-container" style="display: none;">
+        <h2>Login Successful: Admin</h2>
+        <a href="index.html" class="button"> <button>Return Home</button></a>
+        <p>Welcome Admin</p>
+        <p></p>
+        <p> Employee Database</p>
+        <p></p>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>EmpID</th>
+                    <th>Works for Kids/Adult</th>
+                    <th>Genre</th>
+                </tr>
+            </thead>
+                <tbody>
+                    <tr>
+                        <!--Row 1-->
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <!--Row 2-->
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <!--Row 3-->
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <!--Row 4-->
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <!--Row 5-->
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <!--Row 6-->
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <!--Row 7-->
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    </tbody>
+        </table>
+        <p></p>
+        <p> User Databases</p>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>UserID</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <!--Row 1-->
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <!--Row 2-->
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <!--Row 3-->
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <!--Row 4-->
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <!--Row 5-->
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <!--Row 6-->
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <!--Row 7-->
+                        <td></td>
+                    </tr>
+                    </tbody>
+        </table>
+    </div>
+
+
+
+    <!--Employee Login Page-->
+    <div id="emp_dashboard" class="dashboard-container" style="display: none;">
+        <h2>Login Successful: Employee123</h2>
+        <a href="index.html" class="button"> <button>Return Home</button></a>
+        <p>Welcome Employee123.</p>
+        <p> Employee Information</p>
+        <p> Employee Name: FName Middle_I LName</p>
+        <p></p>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>EmpID</th>
+                    <th>PhoneNum</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <!--Row 1-->
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+        </table>
+        <p></p>
+        <p> Employee Dependents</p>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Child Name</th>
+                        <th>Birthdate</th>
+                    </tr>
+                </thead>
+                <tbody>
+                     <tr>
+                            <!--Row 1-->
+                            <td></td>
+                            <td></td>
+        </table>
+        <p></p>
+        <p> Employee Works For and/or Manages</p>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Section</th>
+                    <th>Kids/Adult</th>
+                    <th>Genre</th>
+                    <th>Manager (T/F)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <!--Row 1-->
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </table>
+        
+    </div>
+    
+</body>
+</html>
