@@ -19,15 +19,15 @@
         function handleLogin(event) {
             event.preventDefault(); 
     
-            const username = document.getElementById("username").value;
-            const password = document.getElementById("password").value;
+            const username = document.querySelector("#username").value;
+            const password = document.querySelector("#password").value;
 
             if (username === "admin" && password === "123") { 
-                document.getElementById("admin_dashboard").style.display = "block"; 
+                document.querySelector("#admin_dashboard").style.display = "block"; 
                 document.querySelector(".login-container").style.display = "none"; 
             } 
             else if (username === "employee123" && password === "123") {
-                document.getElementById("emp_dashboard").style.display = "block"; 
+                document.querySelector("#emp_dashboard").style.display = "block"; 
                 document.querySelector(".login-container").style.display = "none"; 
             }
             else {
