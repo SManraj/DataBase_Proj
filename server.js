@@ -16,7 +16,7 @@ const db = mysql.createConnection({
     host: "localhost",
     user: "root",
     password: "password", 
-    database: "employee_db",
+    database: "library",
 });
 
 db.connect((err) => {
